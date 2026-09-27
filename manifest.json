@@ -1,0 +1,60 @@
+{
+  "id": "dinner-tonight",
+  "name": "Dinner Tonight",
+  "version": "1.0.0",
+  "description": "Tonight's dinner from the Home Screens meal planner, big, with tomorrow underneath.",
+  "author": "Tanya",
+  "license": "MIT",
+  "minAppVersion": "1.7.1",
+  "moduleType": "dinner-tonight",
+  "category": "Personal",
+  "icon": "UtensilsCrossed",
+  "defaultConfig": {
+    "slot": "dinner",
+    "accentColor": "#b45309"
+  },
+  "defaultSize": {
+    "w": 1000,
+    "h": 240
+  },
+  "defaultStyle": {
+    "fontSize": 18,
+    "padding": 28,
+    "borderRadius": 28
+  },
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "slot": {
+        "type": "string",
+        "title": "Meal",
+        "ui:widget": "select",
+        "ui:group": "Content",
+        "enum": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "enumLabels": [
+          "Breakfast",
+          "Lunch",
+          "Dinner"
+        ]
+      },
+      "accentColor": {
+        "type": "string",
+        "title": "Accent colour",
+        "ui:widget": "color",
+        "ui:group": "Look"
+      }
+    }
+  },
+  "exports": {
+    "component": "default"
+  },
+  "dataRequirements": [],
+  "prefetchUrl": null,
+  "permissions": [
+    "storage"
+  ]
+}
